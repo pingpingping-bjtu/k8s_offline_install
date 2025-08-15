@@ -13,7 +13,7 @@ func InstallK8sComponents() {
 	packages := []string{
 		"cri-tools-1.32.0-150500.1.1.x86_64.rpm",
 		"kubernetes-cni-1.6.0-150500.1.1.x86_64.rpm",
-		"kubeadm-1.32.0-150500.1.1.x86_64.rpm",
+		"kubeadm-" + strings.TrimPrefix(util.Cfg.K8sVersion, "v") + "-150500.1.1.x86_64.rpm",
 		"kubectl-" + strings.TrimPrefix(util.Cfg.K8sVersion, "v") + "-150500.1.1.x86_64.rpm",
 		"kubelet-" + strings.TrimPrefix(util.Cfg.K8sVersion, "v") + "-150500.1.1.x86_64.rpm",
 	}
