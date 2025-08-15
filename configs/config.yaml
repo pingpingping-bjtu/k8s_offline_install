@@ -1,0 +1,24 @@
+# 目标主机配置
+target_ip: "192.168.110.142"
+target_user: "root"
+port: "22"
+password: "root"
+target_path: "/data"
+
+# 版本配置
+k8s_version: "v1.32.2"
+containerd_ver: "2.0.2"
+cri_socket: "unix:///var/run/containerd/containerd.sock"
+
+# 网络配置
+service_cidr: "10.1.0.0/16"
+pod_cidr: "10.244.0.0/16"
+
+# 镜像仓库配置
+image_repo: "private-172-20-36-180:81"
+repo_username: "admin"
+repo_password: "Harbor12345"
+
+# 重试配置
+max_retries: 5
+retry_delay: 5s
